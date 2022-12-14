@@ -84,9 +84,8 @@ body{
 
 .main{
     max-width: 130rem;;
-    height: 100%;
+    height: 70vh;
     margin: 0 auto;
-    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +106,7 @@ body{
     z-index: 1;
 
     /*! Temp  */
-    display: none;
+    /* display: none; */
 }
 
 #section--1 .table{
@@ -149,7 +148,7 @@ body{
     z-index: 1;
 
     /*! Temp  */
-    display: none;
+    /* display: none; */
 }
 
 #section--2 .content{
@@ -223,7 +222,7 @@ body{
     z-index: 1;
 
     /*! Temp  */
-    display: none;
+    /* display: none; */
 }
 
 #section--3 .content{
@@ -432,8 +431,10 @@ body{
             border: none;
             border-radius: 10px;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-            /* display: none; */
-          }
+            
+            /*! Temp  */
+            display: none;
+        }
 
             .logging .logging__title {
                 font-size: 2rem;
@@ -508,9 +509,18 @@ body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                /*! TEMP  */
+                display: none;
             }
 
 
             /*? SHOW CLASS */
-          
+            .show {
+                display: block;
+            }
+
+            .hidden {
+                display: none;
+            }
          
