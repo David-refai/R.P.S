@@ -509,6 +509,17 @@ body{
                 justify-content: center;
                 align-items: center;
             }
+                /* SHOW CLASS  */
 
+                .show {
+                    display: block;
+                }
+
+
+                /*? HIDDEN CLASS  */
+
+                .hidden {
+                    display: none;
+                }
           
          
