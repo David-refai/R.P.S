@@ -23,3 +23,15 @@ function navModal() {
   });
 }
 navModal();
+
+function showOverlay(modal) {
+    overlay.classList.add("show");
+  overlay.addEventListener("click", (e) => {
+    e.preventDefault();
+    overlay.classList.remove("show");
+    modal.classList.remove("show");
+    modal.classList.add("hidden");
+
+  });
+}
+
