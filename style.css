@@ -523,4 +523,12 @@ body{
             .hidden {
                 display: none;
             }
-         
+
+            /*! Winner class  */
+
+            .winner {
+                background-color: rgb(104, 32, 32) !important;
+                transition: 0.8s all ease;
+                color: #eff0f6;
+              }
+  
