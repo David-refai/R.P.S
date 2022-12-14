@@ -155,3 +155,19 @@ function game() {
 }
 
 game();
+restartGame();
+
+//? function for restarting the game after a player clicks the play again button
+function restartGame() {
+    restart.addEventListener("click", function () {
+      playerOneScore = 0;
+      playerTwoScore = 0;
+      scoreTwo.textContent = playerTwoScore;
+      scoreOne.textContent = playerOneScore;
+      playerOne.classList.remove("winner");
+      playerTwo.classList.remove("winner");
+      choices.forEach((choice) => choice.removeAttribute("disabled", "disabled"));
+      restart.style.display = "none";
+    });
+  }
+  
