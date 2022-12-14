@@ -411,4 +411,9 @@ body{
         .restart-btn:active{
             transform: scale(1.1);
         }
-   
+    
+        .split {
+            width: 4px;
+            height: 95%;
+            background-color: #000;
+          }
