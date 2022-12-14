@@ -1,0 +1,207 @@
+
+/* It is global section, I zeroed all elements margins and paddings  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* It is global section, I set font-family for all elements  */
+
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+.header{
+    max-width: 130rem;
+    margin: 10px auto;
+    height: 6rem;
+    background: linear-gradient(
+    90deg,
+    rgba(62, 176, 117, 1) 60%,
+    rgb(139, 195, 185) 100%
+   
+  );
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.5rem 0.5rem rgb(0, 0, 0, 0.2);
+    /* position: relative; */
+}
+
+.header_logo{
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+.nav_ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav_link{
+    text-decoration: none;
+    color: rgb(99, 99, 99);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+    font-weight: 900;
+    
+}
+
+.nav_link:hover{
+    background-color: rgb(219, 218, 218);
+    border-radius: 0.5rem;
+}
+
+.nav_link:active{
+    background-color: rgb(51, 137, 63);
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+.main{
+    max-width: 130rem;;
+    height: 100%;
+    margin: 0 auto;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#section--1{
+    width: 70%;
+    height: 60%;
+    padding: 20px;
+    top: 0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+
+    /*! Temp  */
+    display: none;
+}
+
+#section--1 .table{
+    align-items: center;
+    margin: 10px auto;
+    width: 90%;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    font-size: medium;
+    color: #000;
+
+}
+#section--1 .table tr {
+    border: 1px solid #000;
+  }
+
+  #section--1 .table tr td {
+    border: 1px solid #000;
+    text-align: center;
+  }
+  
+  #section--1 .table tr th {
+    border: 1px solid #000;
+    text-align: center;
+  }
+
+
+  /*? SECTION - 2  */
+#section--2{
+    width: 70%;
+    height: 80%;
+    padding: 20px;
+    top: 0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+
+    /*! Temp  */
+    display: none;
+}
+
+#section--2 .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#section--2 .content .content__title{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #000;
+}
+
+#section--2 .content .content__text{
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#section--2 .close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #000;
+    cursor: pointer;
+}
+
+#section--2 .close:hover{
+    color: #f00;
+}
+
+#section--2 .close:active{
+    color: #f00;
+}
+
+#section--2 .video{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*? SECTION 3  */

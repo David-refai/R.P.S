@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>R.P.S</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <img class="logo" src="./image/logo.png" alt="logo" />
+            <h2 class="welcome">Welcome</h2>
+          </div>
+    
+          <nav class="nav">
+            <ul class="nav_ul">
+              <li>
+                <a class="nav_link" id="new-game" href="#section--3">New Game</a>
+              </li>
+              <li><a class="nav_link" id="save" href="#">Save</a></li>
+              <li>
+                <a class="nav_link" id="rules-btn" href="#section--2">Rules</a>
+              </li>
+              <li>
+                <a class="nav_link" id="history-btn" href="#section--1"
+                  >Statistics</a
+                >
+              </li>
+            </ul>
+          </nav>
+    </header>
+
+    <main class="main">
+        <section class="form hidden" id="section--1">
+     
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Player</th>
+                  <th>Computer</th>
+                  <th>Result</th>
+                  <th>date</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          
+        </section>
+       
+        <form class=" logging ">
+          <!-- <span id="close">X</span> -->
+          <span class="error hidden">Write your name please!</span>
+          <span class="checkout-name hidden">Name must between (3-12) </span>
+          <h2>What is your name? 😊</h2>
+          <input type="text" id="name" class="" />
+          <button id="btn">Submit</button>
+        </form>
+
+        <section class="section-game">
+          <div class="game">
+            <button class="restart-game hidden">Play agin</button>
+
+            <div class="player-one player">
+              <img class="player-one-img" src="./image/rock.png" alt="rock" />
+
+              <div class="btn-list">
+                <button class="choice-btn btn" id="rock">
+                  Rock <span>👊</span>
+                </button>
+                <button class="choice-btn btn" id="paper">
+                  Paper <span>✋</span>
+                </button>
+                <button class="choice-btn btn" id="scissors">
+                  Scissors <span>✌ </span>
+                </button>
+              </div>
+              <div class="score">
+                <h3>Score</h3>
+                <h3 id="player-one-score">0</h3>
+              </div>
+            </div>
+            <div class="split"></div>
+
+            <div class="player-two player">
+              <img class="player-two-img" src="./image/rock.png" alt="rock" />
+
+              <div class="score">
+                <h3>Score</h3>
+                <h3 id="player-two-score">0</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="rules hidden" id="section--2">
+          <div class="content">
+            <h2 class="content__title">Rules</h2>
+            <!-- NOTE I must delete the id  -->
+            <span id="closeRules" class="close">X</span>
+            <p class="content__text">
+              Rock paper scissors is a hand game usually played between two
+              people, in which each player simultaneously forms one of three
+              shapes with an outstretched hand. These shapes are "rock" (a
+              closed fist), "paper" (a flat hand), and "scissors" (a fist with
+              the index finger and middle finger extended, forming a V).
+              "Scissors" is identical to the two -fingered V sign (also
+              indicating "victory" or "peace") except that it is pointed
+              horizontally instead of being held upright in the air.
+            </p>
+
+            <iframe
+              class="video"
+              src="https://www.youtube.com/embed/F4uQssMXO38"
+              title="How To Play Rock Paper Scissors"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
+        </section>
+        <section id="section--3" class="new-game hidden">
+          <div class="content">
+            <h2>Would you want to start new game?</h2>
+
+            <span id="closeNewGame">❌</span>
+            <p>
+              OBS ⁉ : If you want to start new game you will lose your score 🙁
+            </p>
+          </div>
+          <div class="yes-no">
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+          </div>
+        </section>
+      </main>
+   
+</body>
+</html>
