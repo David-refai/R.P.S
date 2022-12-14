@@ -134,16 +134,15 @@ function game() {
             playerOneScore > playerTwoScore
               ? `${name.value} wins 🏆`
               : "computer wins 😭";
+              //? getting the date and time
           date = `${hour}:${minute} ${day}/${month}/${year}`;
 
           player = new Players(playerOneScore, playerTwoScore, result, date);
           dataForSaving.push(player);
 
+          //? saving the data to statistics table
           tbody.innerHTML += `<tr><td>${player.player}</td><td>${player.computer}</td><td>${player.result}</td><td>${player.date}</td></tr>`;
-        //   console.log(dataForSaving);
-
-          // playerOneScore = 0;
-          // playerTwoScore = 0;
+ 
         } else {
           choices.forEach((choice) =>
             choice.removeAttribute("disabled", "disabled")
