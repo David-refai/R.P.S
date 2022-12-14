@@ -98,7 +98,7 @@ function game() {
         imgOne.style.transform = "rotate(0deg)";
         imgOne.src = "./image/scissors.png";
       }
-      // choices.forEach((choice) => choice.setAttribute("disabled", "disabled"));
+      choices.forEach((choice) => choice.setAttribute("disabled", "disabled"));
       animate();
       setTimeout(() => {
         cancelAnimationFrame(reqAnimate);

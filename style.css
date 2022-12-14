@@ -532,3 +532,11 @@ body{
                 color: #eff0f6;
               }
   
+            .choice-btn:disabled {
+                background-color: rgb(175, 177, 191)!important;    
+                color: #000 !important;
+                transform: none !important;
+                box-shadow: none !important;
+                cursor: not-allowed !important;
+              }
+              
