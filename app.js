@@ -35,3 +35,23 @@ function showOverlay(modal) {
   });
 }
 
+function game(){
+    choices.forEach((choice) => {
+        choice.addEventListener("click", (e) => {
+            e.preventDefault()
+            const playerChoice = e.currentTarget.getAttribute("id");
+            if (playerChoice === "rock") {
+              imgOne.style.transform = "rotate(180deg)";
+              imgOne.src = "./image/rock.png";
+            } else if (playerChoice === "paper") {
+              imgOne.src = "./image/paper.png";
+              imgOne.style.transform = "rotate(0deg)";
+            } else if (playerChoice === "scissors") {
+              imgOne.style.transform = "rotate(0deg)";
+              imgOne.src = "./image/scissors.png";
+            }
+        });
+    });
+}
+
+game();
