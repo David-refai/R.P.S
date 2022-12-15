@@ -15,6 +15,14 @@ const tr = document.createElement("tr");
 const td = document.createElement("td");
 const tbody = document.querySelector("tbody");
 const restart = document.querySelector(".restart-btn");
+const playerName = document.querySelector(".logging__input");
+const start = document.querySelector(".logging__btn");
+const welcome = document.querySelector(".welcome");
+const logging = document.querySelector(".logging");
+const error = document.querySelector(".error");
+const error_name_length = document.querySelector(".error_name");
+console.log(error);
+
 // console.log(navLinks);
 
 const arr = ["rock", "paper", "scissors"];
@@ -59,10 +67,12 @@ function navModal() {
 navModal();
 
 function showOverlay(modal) {
-  overlay.classList.add("show");
+    overlay.classList.remove("hidden");
+  overlay.classList.add("show_2");
   overlay.addEventListener("click", (e) => {
     e.preventDefault();
-    overlay.classList.remove("show");
+    overlay.classList.remove("show_2");
+    overlay.classList.add("hidden");
     modal.classList.remove("show");
     modal.classList.add("hidden");
   });
@@ -126,13 +136,14 @@ function game() {
             ? playerOne.classList.add("winner")
             : playerTwo.classList.add("winner");
           //   restartGame();
-          restart.style.display = "block";
+          restart.classList.remove("hidden");
+          restart.classList.add("show");
           choices.forEach((choice) =>
             choice.setAttribute("disabled", "disabled")
           );
           result =
             playerOneScore > playerTwoScore
-              ? `${name.value} wins 🏆`
+              ? `${playerName.value} wins 🏆`
               : "computer wins 😭";
               //? getting the date and time
           date = `${hour}:${minute} ${day}/${month}/${year}`;
@@ -166,7 +177,48 @@ function restartGame() {
       playerOne.classList.remove("winner");
       playerTwo.classList.remove("winner");
       choices.forEach((choice) => choice.removeAttribute("disabled", "disabled"));
-      restart.style.display = "none";
+      restart.classList.remove("show");
     });
   }
   
+  //? function for starting the game after the user has entered a name
+function startGame() {
+    start.addEventListener("click", (e) => {
+      e.preventDefault();
+  
+      if (playerName.value === "") {
+        showError(error);
+        setTimeout(() => {
+          hideError(error);
+        }, 2500);
+      } else if (playerName.value.length > 12 || playerName.value.length < 3) {
+        showError(error_name_length);
+        setTimeout(() => {
+          hideError(error_name_length);
+        }, 2500);
+      } else if (localStorage.getItem(playerName.value) !== null) {
+        showData();
+      } else {
+        welcome.textContent = `Welcome ${playerName.value}`;
+        logging.classList.add("hidden");
+        overlay.classList.remove("show_2");
+        overlay.classList.add("hidden");
+      }
+    });
+  }
+
+  startGame();
+
+    //? function for showing the error message
+    function showError(error) {
+        error.classList.remove("hidden");
+        error.classList.add("show_2");
+        playerName.style.border = "3px solid red";
+        }
+        //? function for hiding the error message
+        function hideError(error) {
+        error.classList.remove("show_2");
+        error.classList.add("hidden");
+        playerName.style.border = "none";
+        
+        }
