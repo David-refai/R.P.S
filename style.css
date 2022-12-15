@@ -602,11 +602,73 @@ body {
     padding: 1rem;
   }
 
-  .notification_show {
+  .notification_show::before {
+    position: absolute;
+    content: "Saved successfully 🥳";
+    background-color: #d4d4d4;
+    margin-top: 10rem;
+    width: 100%;
+    right: 0;
+    border-radius: 0 0 0 15px;
+    color: rgb(27, 160, 87);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
     transform-origin: right;
     -webkit-animation: notify 3s ease-in-out infinite;
     animation: notify 4s ease forwards;
 
+  }
+
+  .notification_error::before {
+    position: absolute;
+    content: "You have no data to save 🥵";
+    background-color: #d4d4d4;
+    margin-top: 10rem;
+    width: 100%;
+    right: 0;
+    border-radius: 0 0 0 15px;
+    color: rgb(27, 160, 87);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    transform-origin: right;
+    -webkit-animation: notify 3s ease-in-out infinite;
+    animation: notify 4s ease forwards;
+  }
+
+  .notification_update::before {
+    position: absolute;
+    content: "Updated successfully 🥳";
+    background-color: #d4d4d4;
+    margin-top: 10rem;
+    width: 100%;
+    right: 0;
+    border-radius: 0 0 0 15px;
+    color: rgb(27, 160, 87);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    transform-origin: right;
+    -webkit-animation: notify 3s ease-in-out infinite;
+    animation: notify 4s ease forwards;
+  }
+
+  .notification_really::before {
+    position: absolute;
+    content: "Really saved 😜";
+    background-color: #d4d4d4;
+    margin-top: 10rem;
+    width: 100%;
+    right: 0;
+    border-radius: 0 0 0 15px;
+    color: rgb(27, 160, 87);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    transform-origin: right;
+    -webkit-animation: notify 3s ease-in-out infinite;
+    animation: notify 4s ease forwards;
   }
   
   @keyframes notify {

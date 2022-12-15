@@ -24,6 +24,7 @@ const error_name_length = document.querySelector(".error_name");
 const rules = document.querySelector(".rules");
 const closes = document.querySelectorAll(".close");
 const newGame = document.querySelector(".new-game");
+const notification = document.querySelector(".notification");
 console.log(error);
 
 // console.log(navLinks);
@@ -51,6 +52,7 @@ function Players(player, computer, result, date) {
   this.date = date;
 }
 
+
 let dataForSaving = [];
 function navModal() {
   navLinks.forEach((link) => {
@@ -65,20 +67,27 @@ function navModal() {
         showOverlay(element);
       }
 
-      if (e.target.getAttribute('id') === 'save') {
-        console.log("save");
-        dataForSaving.push(
-          new Players(player, computerChoice, result, date)
-        );
-        localStorage.setItem("data", JSON.stringify(dataForSaving));
-        document.querySelector(".notification").classList.remove("hidden");
-        document.querySelector(".notification").classList.add("notification_show");
+      if (e.target.getAttribute('id') === 'save' && dataForSaving.length > 0) {
+        saveData();
+        // notification.classList.remove("hidden");
+        // notification.classList.add("notification_show");
       }
 
+
+      else if (e.target.getAttribute('id') === 'save' && dataForSaving.length === 0) {
+        notification.classList.add("notification_error");
+        notification.classList.remove("hidden");
+        
+      }
+
+
+
       setTimeout(() => {
-        document.querySelector(".notification").classList.add("hidden");
-        document.querySelector(".notification").classList.remove("notification_show");
-      }, 3000);
+        notification.classList.add("hidden");
+        notification.classList.remove("notification_show");
+        notification.classList.remove("notification_error");
+        notification.classList.remove("notification_update");
+      }, 4000);
 
    
      
@@ -242,9 +251,7 @@ function startGame() {
         showData();
       } else {
         welcome.textContent = `Welcome ${playerName.value}`;
-        logging.classList.add("hidden");
-        overlay.classList.remove("show_2");
-        overlay.classList.add("hidden");
+       removeModal(logging);
       }
     });
   }
@@ -272,3 +279,48 @@ function startGame() {
           console.log(currentIframe.src);
           
         };
+
+        function saveData() {
+          let storage = JSON.parse(localStorage.getItem(playerName.
+            value));
+          
+
+      if(storage) {
+          notification.classList.add("notification_update");
+          notification.classList.remove("hidden");;
+          localStorage.removeItem(playerName.value);
+          localStorage.setItem(playerName.value, JSON.stringify(dataForSaving));
+        
+      }
+        else {
+        
+          localStorage.setItem(playerName.value, JSON.stringify(dataForSaving || []));
+          notification.classList.remove("hidden");
+          notification.classList.add("notification_show");
+        }
+        }
+
+        function showData() {
+          let data = JSON.parse(localStorage.getItem(playerName.value));
+          data.forEach((item) => {
+            tbody.innerHTML += `<tr><td>${item.player}</td><td>${item.computer}</td><td>${item.result}</td><td>${item.date}</td></tr>`;
+
+            dataForSaving.push(item);
+          });
+
+          welcome.textContent = `Welcome back ${playerName.value}`;
+          removeModal(logging)
+        }
+
+        function removeModal(modal) {
+          modal.classList.add("hidden");
+          overlay.classList.remove("show_2");
+          overlay.classList.add("hidden");
+        }
+
+        // function updateData () {
+        //   let data = JSON.parse(localStorage.getItem(playerName.value));
+        //   data.forEach((item) => {
+        //     tbody.innerHTML += `<tr><td>${item.player}</td><td>${item.computer}</td><td>${item.result}</td><td>${item.date}</td></tr>`;
+        //   });
+        // }
