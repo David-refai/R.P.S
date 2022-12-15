@@ -89,7 +89,7 @@ body {
 #section--1 {
   width: 80rem;
   padding: 20px;
-  top: 15rem;
+  top: 5rem;
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
@@ -128,7 +128,7 @@ body {
 #section--2 {
   width: 90rem;
   height: 60rem;
-  top: 15rem;
+  top: 1rem;
   padding: 20px;
   border: none;
   border-radius: 10px;
@@ -202,7 +202,7 @@ body {
 #section--3 {
   width: 53rem;
   height: 25rem;
-  top: 15rem;
+  top: 10rem;
   border: none;
   border-radius: 10px;
   padding: 0 1rem;
@@ -551,7 +551,7 @@ body {
 /*? SHOW CLASS */
 .show {
     display: block;
-    animation: drop 0.3s ease forwards;
+    animation: drop 0.4s ease forwards;
     /* z-index: 3; */
   }
   
@@ -562,7 +562,7 @@ body {
     }
     70% {
       opacity: 1;
-      transform: translateY(200px);
+      transform: translateY(70px);
     }
     100% {
       opacity: 1;
@@ -572,6 +572,7 @@ body {
   
   .show_2 {
     display: block;
+    transition: 0.8s all ease;
   }
   
   /*? HIDDEN CLASS */
@@ -580,3 +581,39 @@ body {
     display: none;
   }
   
+
+
+  /*! save class  */
+  .notification {
+    position: absolute;
+    background-color: #d4d4d4;
+    margin-top: 10rem;
+    width: 20%;
+    right: 0;
+    border-radius: 0 0 0 15px;
+
+
+  }
+
+  .notification p{
+    color: rgb(27, 160, 87);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+  }
+
+  .notification_show {
+    transform-origin: right;
+    -webkit-animation: notify 3s ease-in-out infinite;
+    animation: notify 4s ease forwards;
+
+  }
+  
+  @keyframes notify {
+    0% {transform: scaleX(0);}
+    13% {transform: scale(1);}
+    16% {transform: scale(1);}
+
+    50% {transform: scaleX(1);}
+    100% {transform: scaleX(-10);}
+  }

@@ -21,6 +21,9 @@ const welcome = document.querySelector(".welcome");
 const logging = document.querySelector(".logging");
 const error = document.querySelector(".error");
 const error_name_length = document.querySelector(".error_name");
+const rules = document.querySelector(".rules");
+const closes = document.querySelectorAll(".close");
+const newGame = document.querySelector(".new-game");
 console.log(error);
 
 // console.log(navLinks);
@@ -61,6 +64,24 @@ function navModal() {
         element.classList.remove("hidden");
         showOverlay(element);
       }
+
+      if (e.target.getAttribute('id') === 'save') {
+        console.log("save");
+        dataForSaving.push(
+          new Players(player, computerChoice, result, date)
+        );
+        localStorage.setItem("data", JSON.stringify(dataForSaving));
+        document.querySelector(".notification").classList.remove("hidden");
+        document.querySelector(".notification").classList.add("notification_show");
+      }
+
+      setTimeout(() => {
+        document.querySelector(".notification").classList.add("hidden");
+        document.querySelector(".notification").classList.remove("notification_show");
+      }, 3000);
+
+   
+     
     });
   });
 }
@@ -75,8 +96,30 @@ function showOverlay(modal) {
     overlay.classList.add("hidden");
     modal.classList.remove("show");
     modal.classList.add("hidden");
+
+    
+    stopVideo(rules);
   });
 }
+
+function closeModel() {
+  closes.forEach((close) => {
+    close.addEventListener("click", (e) => {
+      e.preventDefault();
+      let parent = close.parentNode.parentNode;
+      parent.classList.remove("show");
+      parent.classList.add("hidden");
+      overlay.classList.remove("show_2");
+      overlay.classList.add("hidden");
+      stopVideo(rules);
+    });
+  });
+}
+closeModel();
+
+
+
+
 //? function for giving the computer a random animations speed
 const animate = function () {
   speed = Math.random() * 0.5 + 0.5;
@@ -135,9 +178,8 @@ function game() {
           playerOneScore
             ? playerOne.classList.add("winner")
             : playerTwo.classList.add("winner");
-          //   restartGame();
           restart.classList.remove("hidden");
-          restart.classList.add("show");
+          restart.classList.add("show_2");
           choices.forEach((choice) =>
             choice.setAttribute("disabled", "disabled")
           );
@@ -177,7 +219,7 @@ function restartGame() {
       playerOne.classList.remove("winner");
       playerTwo.classList.remove("winner");
       choices.forEach((choice) => choice.removeAttribute("disabled", "disabled"));
-      restart.classList.remove("show");
+      restart.classList.remove("show_2");
     });
   }
   
@@ -222,3 +264,11 @@ function startGame() {
         playerName.style.border = "none";
         
         }
+
+        function stopVideo (modal) {
+          let currentIframe = modal.querySelector('.video');
+          currentIframe.src = currentIframe.src;
+        
+          console.log(currentIframe.src);
+          
+        };
