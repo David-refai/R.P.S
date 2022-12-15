@@ -569,6 +569,7 @@ body {
       transform: translateY(0);
     }
   }
+<<<<<<< HEAD
   
   .show_2 {
     display: block;
@@ -580,3 +581,212 @@ body {
     display: none;
   }
   
+=======
+
+    #section--game .player .img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    background-color: #000;
+    }
+
+    #section--game .player-one-img {
+        transform: scaleX(-1);
+    }
+
+      #section--game .player-one{
+        position: relative;
+    }
+
+    .player-one .btn-list {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 10px;
+        bottom: 24px ;
+        position: absolute;
+        cursor: pointer;
+      }
+
+        .player-one .btn-list .btn {
+         
+            border-radius: 10px;
+            background-color: rgb(21, 51, 218);
+            color: #fff;
+            font-size: 1.5rem;
+            padding: 0.3rem 1rem;
+            transition: all 0.3s;
+            border: none;
+            font-weight: 900;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .player-one .btn-list .btn:hover {
+            background-color: #fff;
+            color: rgb(21, 51, 218);
+            border: 1px solid rgb(21, 51, 218);
+        }
+
+        .player-one .btn-list .btn:active {
+            transform: scale(1.1);
+        }
+
+
+        /*? SCORE */
+
+        #section--game .score{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        font-size: 22px;
+        gap: 10px;
+        }
+        
+
+        
+
+        .restart-btn{
+            display: none;
+            position: absolute;
+          z-index: 1;
+            font-size: 2rem;
+            font-weight: 600;
+            color: rgb(241, 241, 241);
+            cursor: pointer;
+            border: none;
+            background-color: rgba(53, 231, 98, 0.658);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            transition: all 0.3s;
+    
+        }
+    
+        .restart-btn:hover{
+            background-color: #fff;
+            color: rgba(16, 180, 57, 0.87);
+            border: 1px solid rgba(53, 231, 98, 0.658);
+        }
+    
+        .restart-btn:active{
+            transform: scale(1.1);
+        }
+    
+        .split {
+            width: 4px;
+            height: 95%;
+            background-color: #000;
+          }
+
+          .logging {
+            position: absolute;
+            width: 50rem;
+            height: 30rem;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3rem;
+            z-index: 1;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            /* display: none; */
+          }
+
+            .logging .logging__title {
+                font-size: 2rem;
+                font-weight: 900;
+                color: #000;
+                margin-top: 1rem;
+            }
+
+            .logging .logging__input {
+                outline: none;
+                border: none;
+                font-size: 1.6rem;
+                color: #000;
+                padding: 0.6rem  1.5rem;
+                border-radius: 10px;
+                background-color: #ffffff;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            }
+
+            .logging .logging__btn {
+               
+                  font-size: 2rem;
+                  font-weight: 600;
+                  color: rgb(241, 241, 241);
+                  cursor: pointer;
+                  border: none;
+                  background-color: rgb(23, 148, 65);
+                  padding: 0.5rem 1rem;
+                  border-radius: 10px;
+                  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+                  transition: all 0.3s;
+            }
+
+            .logging .logging__btn:hover {
+                background-color: #fff;
+                color: rgb(23, 148, 65);
+                border: 1px solid rgb(23, 148, 65);
+            }
+
+            .logging .logging__btn:active {
+                transform: scale(1.1);
+            }
+
+            .logging .error{
+                color: red;
+                font-size: 1.5rem;
+                font-weight: 600;
+
+                /*! Temp  */
+                display: none;
+            }
+
+            .logging .error--name{
+                color: red;
+                font-size: 1.5rem;
+                font-weight: 600;
+
+                
+                /*! Temp  */
+                display: none;
+            }
+
+
+            .overlay {
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(6px);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+                /* SHOW CLASS  */
+
+                .show {
+                    display: block;
+                }
+
+
+                /*? HIDDEN CLASS  */
+
+                .hidden {
+                    display: none;
+                }
+          
+         
+>>>>>>> dev
