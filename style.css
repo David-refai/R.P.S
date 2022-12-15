@@ -1,101 +1,5 @@
 /* It is global section, I zeroed all elements margins and paddings  */
 * {
-<<<<<<< HEAD
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* It is global section, I set font-family for all elements  */
-  
-  html {
-    font-family: sans-serif;
-    font-size: 62.5%;
-  }
-  
-  body {
-    background-color: #f5f5f5;
-  }
-  
-  .header {
-    max-width: 130rem;
-    margin: 10px auto;
-    height: 6rem;
-    background: linear-gradient(
-      90deg,
-      rgba(62, 176, 117, 1) 60%,
-      rgb(139, 195, 185) 100%
-    );
-    padding: 1.5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 0.5rem 0.5rem rgb(0, 0, 0, 0.2);
-    /* position: relative; */
-  }
-  
-  .header_logo {
-    gap: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .logo {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    background-color: #fff;
-  }
-  
-  .nav_ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
-  }
-  
-  .nav_link {
-    text-decoration: none;
-    color: rgb(99, 99, 99);
-    font-size: 1.6rem;
-    padding: 1rem 2rem;
-    transition: all 0.3s;
-    font-weight: 900;
-  }
-  
-  .nav_link:hover {
-    background-color: rgb(219, 218, 218);
-    border-radius: 0.5rem;
-  }
-  
-  .nav_link:active {
-    background-color: rgb(51, 137, 63);
-    border-radius: 0.5rem;
-    color: #fff;
-  }
-  
-  .main {
-    max-width: 130rem;
-    height: 70vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-  }
-  
-  #section--1 {
-    width: 80rem;
-    padding: 20px;
-    top: 15rem;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    background-color: #ffffff;
-=======
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -169,6 +73,12 @@ body {
   background-color: rgb(51, 137, 63);
   border-radius: 0.5rem;
   color: #fff;
+}
+
+.welcome {
+font-size: 2rem;
+color: rgb(215, 215, 215);
+font-style: oblique;
 }
 
 .main {
@@ -556,71 +466,19 @@ body {
 }
 
 .logging .error {
->>>>>>> developer
-    position: absolute;
-    z-index: 2;
-  
-    /*! Temp  */
-    /* display: none; */
-  }
-  
-  #section--1 .table {
-    align-items: center;
-    margin: 10px auto;
-    width: 90%;
-    border: 1px solid #000;
-    border-collapse: collapse;
-    font-size: medium;
-    color: #000;
-  }
-  #section--1 .table tr {
-    border: 1px solid #000;
-  }
-  
-  #section--1 .table tr td {
-    border: 1px solid #000;
-    text-align: center;
-  }
-  
-  #section--1 .table tr th {
-    border: 1px solid #000;
-    text-align: center;
-  }
-  
-  /*? SECTION - 2  */
-  #section--2 {
-    width: 90rem;
-    height: 60rem;
-    top: 15rem;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    background-color: #ffffff;
-    position: absolute;
-<<<<<<< HEAD
-    z-index: 2;
-  
-    /*! Temp  */
-    /* display: none; */
-  }
-  
-  #section--2 .content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  #section--2 .content .content__title {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: #000;
-=======
-    top: 4rem;
+  position: absolute;
+  top: 4rem;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  /*! Temp  */
+  /* display: none; */
+}
+
+.logging .error_name {
+  position: absolute;
+  top: 4rem;
   color: red;
   font-size: 1.5rem;
   font-weight: 600;
@@ -633,7 +491,6 @@ body {
 .logging .error_name::before {
   content: "Name must be at least 3 characters";
 }
-
 
 .overlay {
   -webkit-backdrop-filter: blur(5px);
@@ -650,7 +507,6 @@ body {
   /*! TEMP  */
   /* display: none; */
 }
-
 
 /*! Winner class  */
 
@@ -695,556 +551,114 @@ body {
   font-weight: 600;
 }
 
-
 /*? SHOW CLASS */
 .show {
-    display: block;
-    animation: drop 0.4s ease forwards;
-    /* z-index: 3; */
-  }
-  
-  @keyframes drop {
-    0% {
-      opacity: 0;
-      /* transform: translateY(-100px); */
-    }
-    70% {
-      opacity: 1;
-      transform: translateY(70px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .show_2 {
-    display: block;
-    transition: 0.8s all ease;
->>>>>>> developer
-  }
-  
-  #section--2 .content .content__text {
-    font-size: 1.6rem;
-    color: #000;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  }
-  
-  /*! CLOSE Class  */
-  .close {
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    font-size: 2rem;
-    font-weight: 900;
-    color: #000;
-    cursor: pointer;
-  }
-  
-  .close:hover {
-    color: #f00;
-  }
-  
-  .close:active {
-    color: #f00;
-    transform: scale(1.1);
-  }
-  
-  /*? Video class  */
-  
-  #section--2 .video {
-    width: 50%;
-    height: 100%;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /*? SECTION 3  */
-  
-  #section--3 {
-    width: 53rem;
-    height: 25rem;
-    top: 15rem;
-    border: none;
-    border-radius: 10px;
-    padding: 0 1rem;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    background-color: #ffffff;
-    position: absolute;
-    z-index: 2;
-  
-    /*! Temp  */
-    /* display: none; */
-  }
-  
-  #section--3 .content {
-    display: flex;
-    margin-top: 4rem;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  #section--3 .content .content__title {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #000;
-    margin-top: 1rem;
-  }
-  
-  #section--3 .content .content__text {
-    font-size: 1.6rem;
-    color: #000;
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  }
-  
-  #section--3 .btn {
-    max-width: 100%;
-    height: 40%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  #section--3 .btn .btn__yes_no {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1.6rem;
-    padding: 1rem 1.8rem;
-    transition: all 0.3s;
-    font-weight: 900;
-    border-radius: 10px;
-    border: none;
-    background-color: #04a827;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-  }
-  
-  #section--3 .btn .btn__yes_no:hover {
-    background-color: #fff;
-    color: #04a827;
-    border: 1px solid #04a827;
-  }
-  
-  #section--3 .btn .btn__yes_no:active {
-    background-color: #fff;
-    color: #04a827;
-    border: 1px solid #04a827;
-    transform: scale(1.1);
-  }
-  
-  /*? SECTION 4  */
-  #section--game {
-    position: relative;
-    top: 0;
-    min-width: 700px;
-    height: 400px;
-  }
-  
-  #section--game .content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* gap: 2rem; */
-  }
-  
-  #section--game .player {
-    background-color: rgb(175, 50, 50);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    border-radius: 10px;
-  }
-  
-  #section--game .player .img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10%;
-    background-color: #000;
-  }
-  
-  #section--game .player-one-img {
-    transform: scaleX(-1);
-  }
-  
-  #section--game .player-one {
-    position: relative;
-  }
-  
-  .player-one .btn-list {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    gap: 10px;
-    bottom: 24px;
-    position: absolute;
-    cursor: pointer;
-  }
-  
-  .player-one .btn-list .btn {
-    border-radius: 10px;
-    background-color: rgb(21, 51, 218);
-    color: #fff;
-    font-size: 1.5rem;
-    padding: 0.3rem 1rem;
-    transition: all 0.3s;
-    border: none;
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .player-one .btn-list .btn:hover {
-    background-color: #fff;
-    color: rgb(21, 51, 218);
-    border: 1px solid rgb(21, 51, 218);
-  }
-  
-  .player-one .btn-list .btn:active {
-    transform: scale(1.1);
-  }
-  
-  /*? SCORE */
-  
-  #section--game .score {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    font-size: 22px;
-    gap: 10px;
-  }
-  
-  .restart-btn {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    font-size: 2rem;
-    font-weight: 600;
-    color: rgb(241, 241, 241);
-    cursor: pointer;
-    border: none;
-    background-color: rgba(53, 231, 98, 0.658);
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    transition: all 0.3s;
-  }
-  
-<<<<<<< HEAD
-  .restart-btn:hover {
-    background-color: #fff;
-    color: rgba(16, 180, 57, 0.87);
-    border: 1px solid rgba(53, 231, 98, 0.658);
-  }
-  
-  .restart-btn:active {
-    transform: scale(1.1);
-  }
-  
-  .split {
-    width: 4px;
-    height: 95%;
-    background-color: #000;
-  }
-  
-  .logging {
-    position: absolute;
-    width: 50rem;
-    height: 30rem;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-    z-index: 2;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  
-    /*! Temp  */
-    /* display: none; */
-  }
-  
-  .logging .logging__title {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #000;
-    margin-top: 1rem;
-  }
-  
-  .logging .logging__input {
-    outline: none;
-    border: none;
-    font-size: 1.6rem;
-    color: #000;
-    padding: 0.6rem 1.5rem;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  }
-  
-  .logging .logging__btn {
-    font-size: 2rem;
-    font-weight: 600;
-    color: rgb(241, 241, 241);
-    cursor: pointer;
-    border: none;
-    background-color: rgb(23, 148, 65);
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    transition: all 0.3s;
-  }
-  
-  .logging .logging__btn:hover {
-    background-color: #fff;
-    color: rgb(23, 148, 65);
-    border: 1px solid rgb(23, 148, 65);
-  }
-  
-  .logging .logging__btn:active {
-    transform: scale(1.1);
-  }
-  
-  .logging .error {
-      position: absolute;
-      top: 4rem;
-    color: red;
-    font-size: 1.5rem;
-    font-weight: 600;
-  
-    /*! Temp  */
-    /* display: none; */
-  }
-  
-  .logging .error_name {
-      position: absolute;
-      top: 4rem;
-    color: red;
-    font-size: 1.5rem;
-    font-weight: 600;
-    transition: 0.8s all ease;
-  
-    /*! Temp  */
-    /* display: none; */
-  }
-  
-  .logging .error_name::before {
-    content: "Name must be at least 3 characters";
-  }
-  
-  
-  .overlay {
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(4px);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    /*! TEMP  */
-    /* display: none; */
-  }
-  
-  
-  /*! Winner class  */
-  
-  .winner {
-    background-color: rgb(104, 32, 32) !important;
-    transition: 0.8s all ease;
-    color: #eff0f6;
-  }
-  
-  .choice-btn:disabled {
-    background-color: rgb(175, 177, 191) !important;
-    color: #000 !important;
-    transform: none !important;
-    box-shadow: none !important;
-    cursor: not-allowed !important;
-  }
-  
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10rem;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  
-  .footer .footer__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .footer .footer__text {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  
-  
-  /*? SHOW CLASS */
-  .show {
-      display: block;
-      animation: drop 0.3s ease forwards;
-      /* z-index: 3; */
-    }
-    
-    @keyframes drop {
-      0% {
-        opacity: 0;
-        /* transform: translateY(-100px); */
-      }
-      70% {
-        opacity: 1;
-        transform: translateY(200px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    .show_2 {
-      display: block;
-    }
-    
-    /*? HIDDEN CLASS */
-    
-    .hidden {
-      display: none;
-    }
-    
-=======
+  display: block;
+  animation: drop 0.4s ease forwards;
+  /* z-index: 3; */
+}
 
+@keyframes drop {
+  0% {
+    opacity: 0;
+    /* transform: translateY(-100px); */
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  /*! save class  */
-  .notification {
-    position: absolute;
-    background-color: #d4d4d4;
-    margin-top: 10rem;
-    width: 20%;
-    right: 0;
-    border-radius: 0 0 0 15px;
+.show_2 {
+  display: block;
+  transition: 0.8s all ease;
+}
 
+/*? HIDDEN CLASS */
 
+.hidden {
+  display: none;
+}
+
+/*! save class  */
+.notification {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  right: 0;
+
+  border-radius: 0 0 0 15px;
+  margin-top: 8rem;
+}
+
+.notification_show::before {
+  position: absolute;
+  border: none;
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.1);
+  content: "Saved successfully 🥳";
+  right: 0;
+  border-radius: 0 0 0 15px;
+  color: rgb(27, 160, 87);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  transform-origin: right;
+  -webkit-animation: notify 3s ease-in-out infinite;
+  animation: notify 4s ease forwards;
+}
+
+.notification_error::before {
+  border: none;
+  box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  content: "You have no data to save 🥵";
+  right: 0;
+  border-radius: 0 0 0 15px;
+  color: rgb(27, 160, 87);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  transform-origin: right;
+  -webkit-animation: notify 3s ease-in-out infinite;
+  animation: notify 4s ease forwards;
+}
+
+.notification_update::before {
+  border: none;
+  box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  content: "Updated successfully 🥳";
+  right: 0;
+  border-radius: 0 0 0 15px;
+  color: rgb(27, 160, 87);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  transform-origin: right;
+  -webkit-animation: notify 1s ease-in-out infinite;
+  animation: notify 4s ease forwards;
+}
+
+@keyframes notify {
+  0% {
+    transform: scaleX(0);
+  }
+  13% {
+    transform: scale(1);
+  }
+  16% {
+    transform: scale(1);
   }
 
-  .notification p{
-    color: rgb(27, 160, 87);
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 1rem;
+  50% {
+    transform: scaleX(1);
+    transform: scale(1);
   }
-
-  .notification_show::before {
-    position: absolute;
-    content: "Saved successfully 🥳";
-    background-color: #d4d4d4;
-    margin-top: 10rem;
-    width: 100%;
-    right: 0;
-    border-radius: 0 0 0 15px;
-    color: rgb(27, 160, 87);
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 1rem;
-    transform-origin: right;
-    -webkit-animation: notify 3s ease-in-out infinite;
-    animation: notify 4s ease forwards;
-
+  100% {
+    transform: scaleX(-5);
   }
-
-  .notification_error::before {
-    position: absolute;
-    content: "You have no data to save 🥵";
-    background-color: #d4d4d4;
-    margin-top: 10rem;
-    width: 100%;
-    right: 0;
-    border-radius: 0 0 0 15px;
-    color: rgb(27, 160, 87);
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 1rem;
-    transform-origin: right;
-    -webkit-animation: notify 3s ease-in-out infinite;
-    animation: notify 4s ease forwards;
-  }
-
-  .notification_update::before {
-    position: absolute;
-    content: "Updated successfully 🥳";
-    background-color: #d4d4d4;
-    margin-top: 10rem;
-    width: 100%;
-    right: 0;
-    border-radius: 0 0 0 15px;
-    color: rgb(27, 160, 87);
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 1rem;
-    transform-origin: right;
-    -webkit-animation: notify 3s ease-in-out infinite;
-    animation: notify 4s ease forwards;
-  }
-
-  .notification_really::before {
-    position: absolute;
-    content: "Really saved 😜";
-    background-color: #d4d4d4;
-    margin-top: 10rem;
-    width: 100%;
-    right: 0;
-    border-radius: 0 0 0 15px;
-    color: rgb(27, 160, 87);
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 1rem;
-    transform-origin: right;
-    -webkit-animation: notify 3s ease-in-out infinite;
-    animation: notify 4s ease forwards;
-  }
-  
-  @keyframes notify {
-    0% {transform: scaleX(0);}
-    13% {transform: scale(1);}
-    16% {transform: scale(1);}
-
-    50% {transform: scaleX(1);}
-    100% {transform: scaleX(-10);}
-  }
->>>>>>> developer
+}
